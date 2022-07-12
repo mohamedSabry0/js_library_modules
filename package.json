@@ -1,0 +1,20 @@
+{
+  "name": "js_library_modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedSabry0/js_library_modules.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohamedSabry0/js_library_modules/issues"
+  },
+  "homepage": "https://github.com/mohamedSabry0/js_library_modules#readme"
+}
