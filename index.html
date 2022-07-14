@@ -5,14 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
-  <script src="index.js" type="module"></script>
   <title>Recommended Books</title>
 </head>
 <body>
   <ul>
-    <li><a href="#list"></a></li>
-    <li><a href="#add"></a></li>
-    <li><a href="#contact"></a></li>
+    <li><a id='list-link' href="#list">List</a></li>
+    <li><a id='add-link' href="#add">Add Book</a></li>
+    <li><a id='contact-link' href="#contact">Contact Us</a></li>
   </ul>
   </nav>
   <div class="date-time"></div>
@@ -27,6 +26,14 @@
       <input type="text" id="author" placeholder="Author">
     </div>
   </section>
-  <section id="contact"></section>
+  <section id="contact">
+    <h2>Contact information</h2>
+    <p>Email: test@example.com</p>
+    <p>phone: 012130131</p>
+  </section>
+  <footer>
+    <h3>Copyright...</h3>
+  </footer>
+  <script src="index.js" type="module"></script>
 </body>
 </html>
