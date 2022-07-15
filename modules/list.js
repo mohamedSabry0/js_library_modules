@@ -6,7 +6,7 @@ class BookList {
   }
 
   listAdd(Book){
-    list.push(Book);
+    this.list.push(Book);
   }
 
   listRemove(book_index){
