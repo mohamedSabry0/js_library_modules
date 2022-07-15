@@ -2,17 +2,18 @@ import { titleInput, authorInput } from './selectors.js';
 import Book from './book.js';
 
 class AddHandler {
-  constructor(list, display) {
+  constructor(list, display, storage) {
     this.bookList = list;
     this.display = display;
+    this.storage = storage;
   }
 
-  handleEvent(event) {
-    console.log(event.target.classList[0]);
+  handleEvent() {
     const book = new Book(titleInput.value, authorInput.value);
-    this.bookList.listAdd(book);
+    // this.bookList.listAdd(book);
+    this.storage.listAdd(book);
     this.display.addBook(book);
-    // this['add'](event);
+
   }
 
   // add() {

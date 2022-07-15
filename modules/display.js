@@ -1,6 +1,14 @@
 import { listElem } from './selectors.js';
-import { removeHandler } from './remove_handler.js';
+import RemoveHandler from './remove_handler.js';
 class Display {
+  constructor(storage){
+    this.storage = storage;
+  }
+
+  displayList(){
+    this.storage.getList().forEach(element => this.addBook(element));
+  }
+
   addBook(book) {
     const bookCard = document.createElement('ul');
     const titleText = document.createElement('li');
@@ -11,8 +19,9 @@ class Display {
     removeBtn.textContent = 'Remove';
     titleText.textContent = book.title;
     authorText.textContent = ' ' + `by ${book.author}`;
+    const rmvHandler = new RemoveHandler(this.storage);
 
-    removeBtn.addEventListener('click', removeHandler);
+    removeBtn.addEventListener('click', rmvHandler);
 
     listElem.appendChild(bookCard);
     bookCard.append(titleText, authorText, removeBtn);
