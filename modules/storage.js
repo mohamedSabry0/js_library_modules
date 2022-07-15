@@ -1,10 +1,10 @@
 class Storage {
-  constructor(){
-    this.bookList = this.getList();
+  constructor() {
+    this.bookList = JSON.parse(localStorage.getItem('books')) || [];
   }
 
-  getList(){
-    return JSON.parse(localStorage.getItem('books')) || [];
+  getList() {
+    return this.bookList;
   }
 
   listAdd(Book) {
@@ -12,8 +12,8 @@ class Storage {
     localStorage.setItem('books', JSON.stringify(this.bookList));
   }
 
-  listRemove(book_index) {
-    this.bookList = this.bookList.filter((_book, index) => index != book_index);
+  listRemove(bookIndex) {
+    this.bookList = this.bookList.filter((_book, index) => index !== bookIndex);
     localStorage.setItem('books', JSON.stringify(this.bookList));
   }
 }

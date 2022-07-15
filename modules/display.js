@@ -1,12 +1,13 @@
 import { listElem } from './selectors.js';
 import RemoveHandler from './remove_handler.js';
+
 class Display {
-  constructor(storage){
+  constructor(storage) {
     this.storage = storage;
   }
 
-  displayList(){
-    this.storage.getList().forEach(element => this.addBook(element));
+  displayList() {
+    this.storage.getList().forEach((element) => { this.addBook(element); });
   }
 
   addBook(book) {
@@ -14,11 +15,10 @@ class Display {
     const titleText = document.createElement('li');
     const authorText = document.createElement('li');
     const removeBtn = document.createElement('button');
-    // removeBtn.classList.add('remove');
 
     removeBtn.textContent = 'Remove';
     titleText.textContent = book.title;
-    authorText.textContent = ' ' + `by ${book.author}`;
+    authorText.textContent = `by ${book.author}`;
     const rmvHandler = new RemoveHandler(this.storage);
 
     removeBtn.addEventListener('click', rmvHandler);

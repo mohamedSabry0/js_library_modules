@@ -1,7 +1,6 @@
 import { DateTime } from './modules/luxon.js';
-import { BookList } from './modules/list.js';
 import { addBtn, dateBox } from './modules/selectors.js';
-import { AddHandler } from './modules/add_handler.js';
+import AddHandler from './modules/add_handler.js';
 
 import Storage from './modules/storage.js';
 import Display from './modules/display.js';
@@ -11,10 +10,8 @@ const storage = new Storage();
 const display = new Display(storage);
 display.displayList();
 
-const bookList = new BookList();
-const addHandler = new AddHandler(bookList, display, storage);
+const addHandler = new AddHandler(display, storage);
 addBtn.addEventListener('click', addHandler);
-
 
 dateBox.textContent = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
 

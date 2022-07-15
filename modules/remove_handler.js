@@ -1,9 +1,9 @@
 class RemoveHandler {
-  constructor(storage){
+  constructor(storage) {
     this.storage = storage;
   }
 
-  handleEvent(event){
+  handleEvent(event) {
     this.removeStorage(event.target);
     this.removeDisplay(event.target);
   }
@@ -13,13 +13,9 @@ class RemoveHandler {
   }
 
   removeStorage = (target) => {
-    console.log(target.parentElement);
     const index = [...target.parentElement.parentElement.children].indexOf(target.parentElement);
     this.storage.listRemove(index);
   }
-
-
-
 }
 
 export default RemoveHandler;
