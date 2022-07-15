@@ -7,7 +7,6 @@ const bookList = new BookList();
 const handler = new Handler(bookList);
 addBtn.addEventListener('click', handler);
 
-
 dateBox.textContent = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
 
 // TODO: list functionality

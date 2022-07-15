@@ -1,7 +1,9 @@
 class Display {
-  constructor(){
+  constructor() {
 
   }
 
+  addBook(book) {
 
+  }
 }

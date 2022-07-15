@@ -1,5 +1,5 @@
+/* eslint no-use-before-define: 0 */
 // these aren't really private, but nor are they really useful to document
-
 /**
  * @private
  */

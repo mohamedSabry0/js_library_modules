@@ -1,8 +1,8 @@
-import { titleInput, authorInput } from "./selectors.js";
+import { titleInput, authorInput } from './selectors.js';
 import Book from './book.js';
 
 class Handler {
-  constructor(list){
+  constructor(list) {
     this.bookList = list;
   }
 
@@ -10,16 +10,15 @@ class Handler {
     this[event.target.id.split('-')[0]](event);
   }
 
-  add(){
+  add() {
     const book = new Book(titleInput.value, authorInput.value);
     this.bookList.listAdd(book);
   }
 
-  remove(){
+  remove() {
 
   }
 }
-
 
 // two inner listeners: add, and nav. one external: remove
 // export listeners to index, and export removeListener to display
