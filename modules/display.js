@@ -17,6 +17,8 @@ class Display {
     const removeBtn = document.createElement('button');
 
     removeBtn.textContent = 'Remove';
+    removeBtn.classList.add('remvBtn');
+
     titleText.textContent = book.title;
     authorText.textContent = `by ${book.author}`;
     const rmvHandler = new RemoveHandler(this.storage);

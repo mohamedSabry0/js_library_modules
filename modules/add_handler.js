@@ -11,10 +11,9 @@ class AddHandler {
     const book = new Book(titleInput.value, authorInput.value);
     this.storage.listAdd(book);
     this.display.addBook(book);
+    titleInput.value = '';
+    authorInput.value = '';
   }
 }
-
-// two inner listeners: add, and nav. one external: remove
-// export listeners to index, and export removeListener to display
 
 export default AddHandler;
