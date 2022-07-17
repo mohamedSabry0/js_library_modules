@@ -1,13 +1,11 @@
 import { DateTime } from './modules/luxon.js';
 import { addBtn, dateBox } from './modules/selectors.js';
 import AddHandler from './modules/add_handler.js';
-import NavHandler from './modules/nav_handler.js';
-
+import navHandler from './modules/nav_handler.js';
 
 import Storage from './modules/storage.js';
 import Display from './modules/display.js';
 
-const navHandler = new NavHandler();
 const nav = document.getElementById('nav-list');
 nav.addEventListener('click', navHandler);
 
