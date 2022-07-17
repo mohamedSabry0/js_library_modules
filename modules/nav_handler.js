@@ -1,6 +1,5 @@
 const navHandler = {
   handleEvent(event) {
-    // console.log(event.target)
     if (event.target.tagName === 'A') {
       const prevSec = document.getElementsByClassName('show')[0];
       prevSec.classList.toggle('show');
