@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Recommended Books</title>
+</head>
+<body>
+  <nav>
+    <ul id="nav-list">
+      <li><a id='list-link' href="#list">List</a></li>
+      <li><a id='add-link' href="#add">Add Book</a></li>
+      <li><a id='contact-link' href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div id="date-time"></div>
+  <main>
+    <section id="list-sec" class="show">
+      <h2>All Recommended Books</h2>
+      <ul id="list"></ul>
+    </section>
+    <section id="add-sec">
+      <h2>Add a New Book</h2>
+      <div>
+        <input type="text" id="title" placeholder="Title">
+        <input type="text" id="author" placeholder="Author">
+        <input type="button" class="add-btn" value="Add">
+      </div>
+    </section>
+    <section id="contact-sec">
+      <h2>Contact information</h2>
+      <p>Email: test@example.com</p>
+      <p>phone: 012130131</p>
+    </section>
+  </main>
+  <footer>
+    <h3>Copyright...</h3>
+  </footer>
+  <script src="./index.js" type="module"></script>
+</body>
+</html>
